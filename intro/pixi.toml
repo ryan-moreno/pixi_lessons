@@ -1,0 +1,22 @@
+[workspace]
+authors = ["ryan-moreno <rrmoreno@wisc.edu>"]
+channels = ["conda-forge"]
+name = "intro"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+lab = { cmd = ["jupyter", "lab"], description = "Launch jupyter notebook", depends-on = [] }
+
+[tasks.alternate_lab] # subtable version of lab
+cmd = ["jupyter", "lab"]
+description = "Launch jupyter notebook"
+depends-on = [] 
+
+[dependencies]
+python = ">=3.13.5,<3.14"
+jupyterlab = ">=4.4.3,<5"
+numpy = ">=2.3.0,<3"
+notebook = ">=7.4.3,<8"
+ipykernel = ">=6.29.5,<7"
+pip = ">=25.1.1,<26"
