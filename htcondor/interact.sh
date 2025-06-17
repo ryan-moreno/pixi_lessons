@@ -11,4 +11,4 @@ if [ -f "mnist_cnn.pt" ]; then
     mv mnist_cnn.pt mnist_cnn_"$(date '+%Y-%m-%d-%H-%M')".pt.bak
 fi
 
-condor_submit mnist_gpu_docker.sub
+condor_submit  -interactive mnist_gpu_docker.sub
